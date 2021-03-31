@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nombre:</p>
+    <input type="text" id = "name"></input>
+    <p>sexo:</p>
+    <select id = "sexo">
+        <option value = "1">mujer</option>
+        <option value = "2">hombre</option>
+    </select>
+    <button onclick = "asignar()">verificar</button>
+    <p id = "msg"></p>
+
+
+    <script>
+        const asignar = () =>{
+            let respuesta = document.getElementById("sexo").value;
+            let nombre = document.getElementById("name").value;
+            let gen = "";
+            if (respuesta == "1"){
+                gen = `bienvenida ${nombre}`
+            } else{
+                gen = `bienvenido ${nombre}`
+            }
+            document.getElementById("msg").innerHTML = gen;
+        }
+    </script>
+  </body>
+</html>
